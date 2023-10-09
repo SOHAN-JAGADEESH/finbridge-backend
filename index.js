@@ -9,7 +9,7 @@ app.use(cors()); // Use the cors middleware to handle CORS
 app.use(express.json()); // Middleware to parse JSON requests
 
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 app.post('/poem', async (req, res) => { // Change to POST
